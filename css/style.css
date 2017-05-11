@@ -1,0 +1,212 @@
+/*----- Сброс стилей -----*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+/*----- Основные стили -----*/
+
+html, body {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	background: url(../img/bg.jpg) no-repeat center;
+	background-size: cover;
+	font-family: 'Russo One', sans-serif;
+}
+
+.pg-canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#area-game {
+	width: 98vw;
+	max-width: 960px;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	z-index: 2;
+	padding-top: 6vmin;
+}
+
+header {
+	margin-bottom: 4vmin;
+	position: relative;
+}
+
+h1 {
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 2px 2px 2px rgba(0,0,0,.9);
+	font-size: 6vmin;
+	font-weight: bold;
+	color: #87CCFF;
+	margin-bottom: 1vmin;
+}
+#user-message {
+	text-align: center;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.9);
+	font-size: 5vmin;
+	font-weight: bold;
+	color: #fff;
+}
+.user-count {
+	display: inline-block;
+	font-size: 4vmin;
+	text-transform: uppercase;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.9);
+	position: absolute;
+	top: 60%;
+}
+#count-red {
+	color: #D46A6A;
+	left: 0;
+}
+#count-blue {
+	color: #877CB0;
+	right: 0;
+}
+
+#game-table {
+	margin: 0 auto;
+}
+#game-table thead td {
+	height: 5vmin;
+	cursor: default;
+}
+#game-table tr td:first-child {
+	width: 5vmin;
+	cursor: default;
+}
+#game-table tr td:first-child:hover,
+#game-table thead td:hover {
+	background: radial-gradient(rgba(0,0,0,.3), rgba(0,0,0,.8));
+}
+#game-table td {
+	width: 10vmin;
+	height: 10vmin;
+	vertical-align: middle;
+	color: #fff;
+	font-size: 3vmin;
+	text-align: center;
+	background: radial-gradient(rgba(0,0,0,.3), rgba(0,0,0,.8));
+	border: 1px solid rgba(255,255,255,.1);
+	cursor: crosshair;
+	transition: all .3s linear;
+}
+#game-table td:hover {
+	background: radial-gradient(rgba(0,0,0,.8), rgba(0,0,0,.8));
+}
+#game-table tbody tr td:not(first-child):after {
+	content: attr(data-title);
+	color: rgba(255,255,255,.8);
+	opacity: 0;
+	transition: opacity .3s linear;
+}
+#game-table tbody tr td:not(first-child):hover:after {
+	opacity: 1;
+}
+
+.ship-red {
+	background: rgba(0,0,0,.8) url(../img/ship-red.png) no-repeat center !important;
+	background-size: 90% !important;
+	transition: .5s;
+}
+.ship-blue {
+	background: rgba(0,0,0,.8) url(../img/ship-blue.png) no-repeat center !important;
+	background-size: 90% !important;
+	transition: .5s;
+}
+.asteroid {
+	background: rgba(0,0,0,.8) url(../img/asteroid.png) no-repeat center !important;
+	background-size: 90% !important;
+	transition: .5s;
+}
+.ship-red:after,
+.ship-blue:after,
+.asteroid:after {
+	content: '' !important;
+}
+
+@media screen and (orientation: landscape) {
+	#area-game {
+		width: 85vw;
+	}
+}
+@media screen and (orientation: portrait) {
+	#game-table {
+		position: relative;
+		top: 14%;
+	}
+	.user-count {
+		top: 180%;
+	}
+	#count-blue {
+		right: 10vmin;
+	}
+	#count-red {
+		left: 10vmin;
+	}
+	#game-table td {
+		width: 12vmin;
+		height: 12vmin;
+	}
+	#game-table tr td:first-child {
+		width: 6vmin;
+	}
+	#game-table thead td {
+		height: 6vmin;
+	}
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Космический бой</title>
+
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+		
+		<script src="js/jquery.1.12.4.min.js"></script>
+		<script src="js/jquery.particleground.min.js"></script>
+		<script src="js/main.js"></script>
+
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div id="area-game">
+			<header>
+				<h1>Космический бой</h1>
+				<p id="user-message">Начнем!</p>
+				<div id="count-red" class="user-count">
+					<span>Счет:</span>
+					<span id="count-red">0</span>
+				</div>
+				<div id="count-blue" class="user-count">
+					<span>Счет:</span>
+					<span id="count-blue">0</span>
+				</div>
+			</header>
+			<table id="game-table">
+				<thead>
+					<tr>
+						<td></td>
+						<td>0</td>
+						<td>1</td>
+						<td>2</td>
+						<td>3</td>
+						<td>4</td>
+						<td>5</td>
+						<td>6</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>А</td>
+						<td id="00" data-title="А0"></td>
+						<td id="01" data-title="А1"></td>
+						<td id="02" data-title="А2"></td>
+						<td id="03" data-title="А3"></td>
+						<td id="04" data-title="А4"></td>
+						<td id="05" data-title="А5"></td>
+						<td id="06" data-title="А6"></td>
+					</tr>
+					<tr>
+						<td>Б</td>
+						<td id="10" data-title="Б0"></td>
+						<td id="11" data-title="Б1"></td>
+						<td id="12" data-title="Б2"></td>
+						<td id="13" data-title="Б3"></td>
+						<td id="14" data-title="Б4"></td>
+						<td id="15" data-title="Б5"></td>
+						<td id="16" data-title="Б6"></td>
+					</tr>
+					<tr>
+						<td>В</td>
+						<td id="20" data-title="В0"></td>
+						<td id="21" data-title="В1"></td>
+						<td id="22" data-title="В2"></td>
+						<td id="23" data-title="В3"></td>
+						<td id="24" data-title="В4"></td>
+						<td id="25" data-title="В5"></td>
+						<td id="26" data-title="В6"></td>
+					</tr>
+					<tr>
+						<td>Г</td>
+						<td id="30" data-title="Г0"></td>
+						<td id="31" data-title="Г1"></td>
+						<td id="32" data-title="Г2"></td>
+						<td id="33" data-title="Г3"></td>
+						<td id="34" data-title="Г4"></td>
+						<td id="35" data-title="Г5"></td>
+						<td id="36" data-title="Г6"></td>
+					</tr>
+					<tr>
+						<td>Д</td>
+						<td id="40" data-title="Д0"></td>
+						<td id="41" data-title="Д1"></td>
+						<td id="42" data-title="Д2"></td>
+						<td id="43" data-title="Д3"></td>
+						<td id="44" data-title="Д4"></td>
+						<td id="45" data-title="Д5"></td>
+						<td id="46" data-title="Д6"></td>
+					</tr>
+					<tr>
+						<td>Е</td>
+						<td id="50" data-title="Е0"></td>
+						<td id="51" data-title="Е1"></td>
+						<td id="52" data-title="Е2"></td>
+						<td id="53" data-title="Е3"></td>
+						<td id="54" data-title="Е4"></td>
+						<td id="55" data-title="Е5"></td>
+						<td id="56" data-title="Е6"></td>
+					</tr>
+					<tr>
+						<td>Ж</td>
+						<td id="60" data-title="Ж0"></td>
+						<td id="61" data-title="Ж1"></td>
+						<td id="62" data-title="Ж2"></td>
+						<td id="63" data-title="Ж3"></td>
+						<td id="64" data-title="Ж4"></td>
+						<td id="65" data-title="Ж5"></td>
+						<td id="66" data-title="Ж6"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<audio>
+			<source src="sound/shot.mp3">
+		</audio>
+	</body>
+</html>	
